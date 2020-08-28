@@ -48,9 +48,9 @@ export default class SideBar extends Component {
               </ul>
               <div className="sidebar-img">
                 <div className="invite">
-                  <img src={require("../images/sidebarimg.png")} />
-                  <p>Invite your team and start collaborating!</p>
-                  <a href="invite">Invite to Dashify</a>
+                  {/*<img src={require("../images/sidebarimg.png")} />*/}
+                  <p>Invite your team and start collaborating</p>
+                  <a href="invite"> <img src={require("../images/logo-mini.png")} /> Invite to Dashify</a>
                 </div>
               </div>
             </div>

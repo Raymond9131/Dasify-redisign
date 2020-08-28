@@ -498,7 +498,7 @@ export default class Topbarmenu extends Component {
         <div className="maindiv">
           <div className="navbar-custom">
             <div className="logobox">
-              <img src={require("../images/logo-dashify.jpg")} />
+              <img src={require("../images/logo-2.png")} />
             </div>
             <div className="box-shadow">
               <ul className="searctbox">

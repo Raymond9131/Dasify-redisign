@@ -291,17 +291,13 @@ export default class CampaignPart2 extends Component {
                 <div className="step2">
                   <ul>
                     <li>
-                      <a href="#">Step 02</a>
+                    <div className="step-sms">
+                      <a href="#">Step 02</a><span>Ralting Email And SMS</span>
+                      </div>
+                      <div className="closebox"><i className="zmdi zmdi-close"></i> Close section</div>
                     </li>
                   </ul>
-                  <div className="ratingemail">
-                    <h2>
-                      Ratings Email And SMS
-                      <a className="close-section">
-                        <i className="zmdi zmdi-close"></i>Close Section
-                      </a>
-                    </h2>
-                  </div>
+                 
 
                   <div className="formbox">
                     <div className="row">
@@ -350,12 +346,12 @@ export default class CampaignPart2 extends Component {
                       </div>
 
                       <div className="col-md-12">
-                        <div className="form-group">
+                        <div className="form-group text-right">
                           <button
                             onClick={this.add_customer_function}
-                            className="add_btn"
+                            className="add_button"
                           >
-                            <img src={require("../images/plus.png")} /> Add
+                             Add
                             another Customer
                           </button>
                         </div>
@@ -364,18 +360,36 @@ export default class CampaignPart2 extends Component {
                   </div>
                 </div>
 
-                <div className="step2 topspace">
+                
+
+                <div className="mt-30">
+                  <div className="">
+                    <div className="row">
+                      <div className="col-md-5 col-md-offset-1">
+                        <button className="gen_btn">
+                          Create a new review generation
+                        </button>
+                      </div>
+                      <div className="col-md-5">
+                        <button type="submit" className="lunch_btn">
+                          Launch Campaign
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+              <div className="step2 topspace">
                   <div className="formbox">
-                    <div className="d-flex">
+                    <div className="design-ui">
+                    <h3>
+                    Upload Your CSV containing Customer Email / Phone Numbers
+                        </h3>
                       <div className="csv">
                         <img src={require("../images/csv.png")} alt="csv" />
                       </div>
                       <div className="csv-text">
-                        <h3>
-                          Uploading Your CSV containing Customer Email/ Phone
-                          Numbers
-                        </h3>
-
                         <button className="download_btn">
                           Download Simple
                         </button>
@@ -388,22 +402,6 @@ export default class CampaignPart2 extends Component {
                   </div>
                 </div>
 
-                <div className="step2 mt-30">
-                  <div className="formbox">
-                    <div className="row">
-                      <div className="col-md-6">
-                        <button className="gen_btn">
-                          Create a new review generation
-                        </button>
-                      </div>
-                      <div className="col-md-6">
-                        <button type="submit" className="lunch_btn">
-                          Launch Campaign
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </form>

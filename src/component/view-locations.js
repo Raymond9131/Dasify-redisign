@@ -719,43 +719,43 @@ export default class LocationManager extends Component {
 
     paymentAccepted = this.state.payment.map(p => (
       <li key={p.id}>
-        <ul>
+       
           {p.Payment_Method == "Visa" ? (
-            <li>
+            
               <img src={require("../images/visa.jpg")} alt="visa" />
-            </li>
+            
           ) : (
             ""
           )}
           {p.Payment_Method == "Maestro" ? (
-            <li style={{ marginLeft: 0 }}>
+            
               <img src={require("../images/master-1.jpg")} alt="master" />
-            </li>
+           
           ) : (
             ""
           )}
           {p.Payment_Method == "DiscoverNetwork" ? (
-            <li style={{ marginLeft: 0 }}>
+            
               <img src={require("../images/descover.jpg")} alt="discover" />
-            </li>
+           
           ) : (
             ""
           )}
           {p.Payment_Method == "Cirrus" ? (
-            <li style={{ marginLeft: 0 }}>
+            
               <img src={require("../images/cirrus.jpg")} alt="cirrus" />
-            </li>
+           
           ) : (
             ""
           )}
           {p.Payment_Method == "AmericanExpress" ? (
-            <li style={{ marginLeft: 0 }}>
+            
               <img src={require("../images/am.jpg")} alt="amex" />
-            </li>
+            
           ) : (
             ""
           )}
-        </ul>
+       
       </li>
     ));
 
@@ -778,10 +778,13 @@ export default class LocationManager extends Component {
           </div>
 
           <div className="mt-30">
-            <div className="white_bg_location">
+            <div className="">
               <div className="row">
-                <div className="col-md-3">
-                  <div className="uploadlogo">
+                <div className="col-md-4">
+                  <div className="white-shadow">
+                    <div className="logo-business">
+                      <h2 className="analytics_btnx">Brothers LLC 
+                      <button className="last_btn">Edit</button></h2>
                     {this.state.logoLoading ? (
                       <div style={{ textAlign: "center" }}>
                         <Loader
@@ -792,10 +795,15 @@ export default class LocationManager extends Component {
                           // timeout={3000} //3 secs
                         />
                       </div>
+                      
                     ) : LocationDetails.Business_Logo ? (
+                      <div className="uploadphoto pt-15">
                       <img src={LocationDetails.Business_Logo} alt="Logo" />
+                      </div>
                     ) : (
-                      <div className="uploadphoto">
+                     
+                      <div className="uploadphoto pt-15">
+                        <div>
                         <i className="zmdi zmdi-cloud-upload"></i>
                         <h3>Upload logo</h3>
                         <input
@@ -803,15 +811,60 @@ export default class LocationManager extends Component {
                           name="Business_Logo"
                           onChange={this.onUploadLogo("Business_Logo")}
                         />
+                        </div>
                       </div>
-                    )}
+                      )}
+
+
+<div className="detailbox">
+<div className="uploadauthor">
+                      <div className="author_namebox">Store Code :</div>
+                      <div className="storetext">{this.state.storeCode}</div>
+                    </div>
+
+                    <div className="uploadauthor">
+                      <div className="author_namebox">Category :</div>
+                      <div className="storetext">{this.state.category}</div>
+                    </div>
+
+                    <div className="uploadauthor">
+                      <div className="author_namebox">Address :</div>
+                      <div className="storetext">
+                        {" "}
+                        {this.state.city}, {this.state.state}{" "}
+                        {this.state.postalCode}
+                      </div>
+                    </div>
+                    <div className="uploadauthor">
+                      <div className="author_namebox">Phone :</div>
+                      <div className="storetext">{this.state.phone}</div>
+                    </div>
+
+                    <div className="uploadauthor">
+                      <div className="author_namebox">Website :</div>
+                      <div className="storetext">{this.state.website}</div>
+                    </div>
+
+
+</div>
+
+                    
+                    </div>
                   </div>
                 </div>
 
-                <div className="col-md-6">
-                  <div className="upload_text">
-                    <h4>{this.state.name}</h4>
-
+                <div className="col-md-4">
+                  <div className="upload_text white-shadow">
+                   
+                    <h2 className="analytics_btnx">{this.state.name} 
+                      <button className="last_btn">Edit</button></h2>
+<div className="pt-15">
+  <h3>About the business</h3>
+  <p>Business vocabulary and commonly used phrases are also detailed in the texts,
+     and all this information - including the texts themselves, the vocabulary, 
+     and the questions - can be downloaded for free. Business vocabulary and commonly used
+     phrases are also detailed in the texts, and all this.</p>
+<div className="detailbox">
                     <div className="uploadauthor">
                       <div className="author_namebox">Store Code :</div>
                       <div className="storetext">{this.state.storeCode}</div>
@@ -840,315 +893,19 @@ export default class LocationManager extends Component {
                       <div className="storetext">{this.state.website}</div>
                     </div>
                   </div>
-                </div>
+                  <ul className="socialicon-new">
+                    <li><a href="#"><img src={require('../images/icon-1.png')} alt=""/></a></li>
+                    <li><a href="#"><img src={require('../images/icon-2.png')} alt=""/></a></li>
+                    <li><a href="#"><img src={require('../images/icon-3.png')} alt=""/></a></li>
+                    <li><a href="#"><img src={require('../images/icon-4.png')} alt=""/></a></li>
 
-                <div className="col-md-3 text-right">
-                  <img src={require("../images/map.jpg")} alt="map" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-30">
-            <div className="row">
-              <div className="col-md-8">
-                {this.state.businessDetailsLoading ? (
-                  <div style={{ textAlign: "center" }}>
-                    <Loader
-                      type="Oval"
-                      color="#00BFFF"
-                      height={30}
-                      width={30}
-                      // timeout={3000} //3 secs
-                    />
+                  </ul>
                   </div>
-                ) : this.state.detailEdit ? (
-                  <div className="row addlocationboxs">
-                    <form onSubmit={this.editDetailsHandler}>
-                      <div className="form-group">
-                        <label>Business Owner Name</label>
-                        <input
-                          name="ownerName"
-                          onChange={this.changeHandler}
-                          type="text"
-                          className="form-control"
-                          id="ownerName"
-                          placeholder="Enter Business Owner Name"
-                          value={this.state.ownerName}
-                        ></input>
-                      </div>
-                      <div className="form-group">
-                        <label>Owner Email</label>
-                        <input
-                          name="ownerEmail"
-                          onChange={this.changeHandler}
-                          type="email"
-                          className="form-control"
-                          id="ownerEmail"
-                          placeholder="Enter Owner Email"
-                          value={this.state.ownerEmail}
-                        ></input>
-                      </div>
-
-                      <div className="form-group">
-                        <label>Business Tagline</label>
-                        <input
-                          name="businessTagline"
-                          onChange={this.changeHandler}
-                          className="form-control"
-                          id="businessTagline"
-                          placeholder="Enter Business Tagline"
-                          value={this.state.businessTagline}
-                        ></input>
-                      </div>
-
-                      <div className="form-group">
-                        <label>Year of Incorporation</label>
-                        <input
-                          name="yearOfIncorp"
-                          onChange={this.changeHandler}
-                          type="text"
-                          className="form-control"
-                          id="yearOfIncorp"
-                          placeholder="Enter Year of Incorporation"
-                          value={this.state.yearOfIncorp}
-                        ></input>
-                      </div>
-
-                      <div className="form-group">
-                        <label>
-                          About The Business <span>*</span>
-                        </label>
-                        <textarea
-                          name="about"
-                          onChange={this.changeHandler}
-                          className="form-control businessh"
-                          value={this.state.about}
-                        ></textarea>
-                      </div>
-                      <div className="form-group">
-                        <label>Facebook Profile</label>
-                        <input
-                          name="facebookProfile"
-                          onChange={this.changeHandler}
-                          type="text"
-                          className="form-control"
-                          placeholder="Enter Facbook Profile"
-                          value={this.state.facebookProfile}
-                        />
-                      </div>
-
-                      <div className="form-group">
-                        <label>Instagram Profile</label>
-                        <input
-                          name="instagramProfile"
-                          onChange={this.changeHandler}
-                          type="text"
-                          className="form-control"
-                          placeholder="Enter Instagram Profile"
-                          value={this.state.instagramProfile}
-                        />
-                      </div>
-
-                      <div className="form-group">
-                        <label>Twitter Profile</label>
-                        <input
-                          name="twitterProfile"
-                          onChange={this.changeHandler}
-                          type="text"
-                          className="form-control"
-                          placeholder="Enter Twitter Profile"
-                          value={this.state.twitterProfile}
-                        />
-                      </div>
-
-                      <div className="business-cover text-center">
-                        <button
-                          type="submit"
-                          className="last_btn"
-                          onClick={this.updateDetailsButton}
-                        >
-                          Update
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                ) : (
-                  <div className="analytics-whice">
-                    <div className="box-space">
-                      <h2 className="analytics_btnx">
-                        Business Details
-                        <button
-                          className="last_btn"
-                          onClick={this.editDetailsButton}
-                        >
-                          <i className="zmdi zmdi-edit"></i> Edit
-                        </button>{" "}
-                      </h2>
-                    </div>
-                    <div className="promotional-box border-bottom">
-                      <div className="abouttext">
-                        <h4>About the business</h4>
-                        <p>{this.state.about}</p>
-                      </div>
-                    </div>
-
-                    <div className="promotional-box border-bottom">
-                      <div className="abouttext">
-                        <p>
-                          Bussiness owner name : <b>{this.state.ownerName}</b>
-                        </p>
-                        <p>
-                          Owner email : <span>{this.state.ownerEmail}</span>
-                        </p>
-                        <p>
-                          Bussiness tagline :{" "}
-                          <span>{this.state.businessTagline}</span>
-                        </p>
-                        <p>
-                          Year of incorporation :{" "}
-                          <span>{this.state.yearOfIncorp}</span>
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="promotional-box">
-                      <ul className="socailicon">
-                        {/* <li><a href="#"><img src={require('../images/yelp.png')}/></a></li> */}
-                        <li>
-                          <a href={this.state.facebookProfile}>
-                            <img src={require("../images/facebook.png")} />
-                          </a>
-                        </li>
-                        <li>
-                          <a href={this.state.instagramProfile}>
-                            <img src={require("../images/instagram.png")} />
-                          </a>
-                        </li>
-                        <li>
-                          <a href={this.state.twitterProfile}>
-                            <img src={require("../images/twitter.png")} />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
-
-                <div className="mt-30">
-                  <div className="analytics-whice">
-                    <div className="box-space">
-                      <h2 className="analytics_btnx">
-                        Payment Method
-                        <button
-                          className="last_btn"
-                          onClick={this.editPaymentButton}
-                        >
-                          <i className="zmdi zmdi-edit"></i> Edit
-                        </button>{" "}
-                      </h2>
-                    </div>
-
-                    {this.state.paymentLoading ? (
-                      <div style={{ textAlign: "center" }}>
-                        <Loader
-                          type="Oval"
-                          color="#00BFFF"
-                          height={30}
-                          width={30}
-                          // timeout={3000} //3 secs
-                        />
-                      </div>
-                    ) : this.state.paymentEdit ? (
-                      <div className="mathedbox">
-                        <form onSubmit={this.editDetailsHandler}>
-                          <div className="paymentbox">
-                            <ul>
-                              <li>
-                                <input
-                                  name="visa"
-                                  type="checkbox"
-                                  onChange={this.checkBoxHandler}
-                                  value="true"
-                                />{" "}
-                                <img
-                                  src={require("../images/visa.jpg")}
-                                  alt="visa"
-                                />
-                              </li>
-
-                              <li>
-                                <input
-                                  name="maestro"
-                                  onChange={this.checkBoxHandler}
-                                  value="true"
-                                  type="checkbox"
-                                />{" "}
-                                <img
-                                  src={require("../images/master-1.jpg")}
-                                  alt="visa"
-                                />
-                              </li>
-                              <li>
-                                <input
-                                  name="discover"
-                                  onChange={this.checkBoxHandler}
-                                  value="true"
-                                  type="checkbox"
-                                />{" "}
-                                <img
-                                  src={require("../images/descover.jpg")}
-                                  alt="visa"
-                                />
-                              </li>
-                              <li>
-                                <input
-                                  name="cirrus"
-                                  onChange={this.checkBoxHandler}
-                                  value="true"
-                                  type="checkbox"
-                                />{" "}
-                                <img
-                                  src={require("../images/cirrus.jpg")}
-                                  alt="visa"
-                                />
-                              </li>
-                              <li>
-                                <input
-                                  name="americanExpress"
-                                  onChange={this.checkBoxHandler}
-                                  value="true"
-                                  type="checkbox"
-                                />{" "}
-                                <img
-                                  src={require("../images/am.jpg")}
-                                  alt="visa"
-                                />
-                              </li>
-                            </ul>
-                          </div>
-
-                          <div className="business-cover text-center">
-                            <button
-                              type="submit"
-                              className="last_btn"
-                              onClick={this.updatePaymentButton}
-                            >
-                              Update
-                            </button>
-                          </div>
-                        </form>
-                      </div>
-                    ) : (
-                      <div className="paymentbox">
-                        <ul>{paymentAccepted}</ul>
-                      </div>
-                    )}
                   </div>
                 </div>
-              </div>
 
-              <div className="col-md-4">
+                
+<div className="col-md-4">
                 {this.state.operatingHoursLoading ? (
                   <div style={{ textAlign: "center" }}>
                     <Loader
@@ -1753,7 +1510,7 @@ export default class LocationManager extends Component {
                     </div>
                   </div>
                 ) : (
-                  <div className="analytics-whice">
+                  <div className="analytics-whice white-shadow">
                     <div className="box-space">
                       <h2 className="analytics_btnx">
                         Operations Hours
@@ -1761,18 +1518,23 @@ export default class LocationManager extends Component {
                           className="last_btn"
                           onClick={this.editHourButton}
                         >
-                          <i className="zmdi zmdi-edit"></i> Edit
+                           Edit
                         </button>{" "}
                       </h2>
                     </div>
 
                     {RegularHours1}
+
+                    <div className="add-a-spacial">
+                    <a href="#">Add a special Hour</a>
+                  </div>
+
                   </div>
                 )}
 
                 {/* Add special hour */}
 
-                <div className="analytics-whice mt-30">
+                {/*<div className="analytics-whice mt-30">
                   <div className="add-a-spacial">
                     <a href="#">Add a special Hour</a>
                   </div>
@@ -1790,7 +1552,7 @@ export default class LocationManager extends Component {
                   ) : this.state.add_special_hour ? (
                     <div className="form-group">
                       <div className="timebox">
-                        {/* <div className="form-day">MONDAY</div> */}
+                        
 
                         <select
                           name="monday_s"
@@ -1907,18 +1669,448 @@ export default class LocationManager extends Component {
                     </div>
                   )}
 
-                  {/* ending of special hour */}
-                </div>
+                  
+                </div>*/}
+                {/* ending of special hour */}
+              </div>
+
+
               </div>
             </div>
           </div>
+
+         {/*} <div className="mt-30">
+            <div className="row">
+              <div className="col-md-8">
+                {this.state.businessDetailsLoading ? (
+                  <div style={{ textAlign: "center" }}>
+                    <Loader
+                      type="Oval"
+                      color="#00BFFF"
+                      height={30}
+                      width={30}
+                      // timeout={3000} //3 secs
+                    />
+                  </div>
+                ) : this.state.detailEdit ? (
+                  <div className="row addlocationboxs">
+                    <form onSubmit={this.editDetailsHandler}>
+                      <div className="form-group">
+                        <label>Business Owner Name</label>
+                        <input
+                          name="ownerName"
+                          onChange={this.changeHandler}
+                          type="text"
+                          className="form-control"
+                          id="ownerName"
+                          placeholder="Enter Business Owner Name"
+                          value={this.state.ownerName}
+                        ></input>
+                      </div>
+                      <div className="form-group">
+                        <label>Owner Email</label>
+                        <input
+                          name="ownerEmail"
+                          onChange={this.changeHandler}
+                          type="email"
+                          className="form-control"
+                          id="ownerEmail"
+                          placeholder="Enter Owner Email"
+                          value={this.state.ownerEmail}
+                        ></input>
+                      </div>
+
+                      <div className="form-group">
+                        <label>Business Tagline</label>
+                        <input
+                          name="businessTagline"
+                          onChange={this.changeHandler}
+                          className="form-control"
+                          id="businessTagline"
+                          placeholder="Enter Business Tagline"
+                          value={this.state.businessTagline}
+                        ></input>
+                      </div>
+
+                      <div className="form-group">
+                        <label>Year of Incorporation</label>
+                        <input
+                          name="yearOfIncorp"
+                          onChange={this.changeHandler}
+                          type="text"
+                          className="form-control"
+                          id="yearOfIncorp"
+                          placeholder="Enter Year of Incorporation"
+                          value={this.state.yearOfIncorp}
+                        ></input>
+                      </div>
+
+                      <div className="form-group">
+                        <label>
+                          About The Business <span>*</span>
+                        </label>
+                        <textarea
+                          name="about"
+                          onChange={this.changeHandler}
+                          className="form-control businessh"
+                          value={this.state.about}
+                        ></textarea>
+                      </div>
+                      <div className="form-group">
+                        <label>Facebook Profile</label>
+                        <input
+                          name="facebookProfile"
+                          onChange={this.changeHandler}
+                          type="text"
+                          className="form-control"
+                          placeholder="Enter Facbook Profile"
+                          value={this.state.facebookProfile}
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Instagram Profile</label>
+                        <input
+                          name="instagramProfile"
+                          onChange={this.changeHandler}
+                          type="text"
+                          className="form-control"
+                          placeholder="Enter Instagram Profile"
+                          value={this.state.instagramProfile}
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label>Twitter Profile</label>
+                        <input
+                          name="twitterProfile"
+                          onChange={this.changeHandler}
+                          type="text"
+                          className="form-control"
+                          placeholder="Enter Twitter Profile"
+                          value={this.state.twitterProfile}
+                        />
+                      </div>
+
+                      <div className="business-cover text-center">
+                        <button
+                          type="submit"
+                          className="last_btn"
+                          onClick={this.updateDetailsButton}
+                        >
+                          Update
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                ) : (
+                  <div className="analytics-whice">
+                    <div className="box-space">
+                      <h2 className="analytics_btnx">
+                        Business Details
+                        <button
+                          className="last_btn"
+                          onClick={this.editDetailsButton}
+                        >
+                          <i className="zmdi zmdi-edit"></i> Edit
+                        </button>{" "}
+                      </h2>
+                    </div>
+                    <div className="promotional-box border-bottom">
+                      <div className="abouttext">
+                        <h4>About the business</h4>
+                        <p>{this.state.about}</p>
+                      </div>
+                    </div>
+
+                    <div className="promotional-box border-bottom">
+                      <div className="abouttext">
+                        <p>
+                          Bussiness owner name : <b>{this.state.ownerName}</b>
+                        </p>
+                        <p>
+                          Owner email : <span>{this.state.ownerEmail}</span>
+                        </p>
+                        <p>
+                          Bussiness tagline :{" "}
+                          <span>{this.state.businessTagline}</span>
+                        </p>
+                        <p>
+                          Year of incorporation :{" "}
+                          <span>{this.state.yearOfIncorp}</span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="promotional-box">
+                      <ul className="socailicon">
+                       
+                        <li>
+                          <a href={this.state.facebookProfile}>
+                            <img src={require("../images/facebook.png")} />
+                          </a>
+                        </li>
+                        <li>
+                          <a href={this.state.instagramProfile}>
+                            <img src={require("../images/instagram.png")} />
+                          </a>
+                        </li>
+                        <li>
+                          <a href={this.state.twitterProfile}>
+                            <img src={require("../images/twitter.png")} />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+
+                <div className="mt-30">
+                  <div className="analytics-whice">
+                    <div className="box-space">
+                      <h2 className="analytics_btnx">
+                        Payment Method
+                        <button
+                          className="last_btn"
+                          onClick={this.editPaymentButton}
+                        >
+                          <i className="zmdi zmdi-edit"></i> Edit
+                        </button>{" "}
+                      </h2>
+                    </div>
+
+                    {this.state.paymentLoading ? (
+                      <div style={{ textAlign: "center" }}>
+                        <Loader
+                          type="Oval"
+                          color="#00BFFF"
+                          height={30}
+                          width={30}
+                          // timeout={3000} //3 secs
+                        />
+                      </div>
+                    ) : this.state.paymentEdit ? (
+                      <div className="mathedbox">
+                        <form onSubmit={this.editDetailsHandler}>
+                          <div className="paymentbox">
+                            <ul>
+                              <li>
+                                <input
+                                  name="visa"
+                                  type="checkbox"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                />{" "}
+                                <img
+                                  src={require("../images/visa.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+
+                              <li>
+                                <input
+                                  name="maestro"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                  type="checkbox"
+                                />{" "}
+                                <img
+                                  src={require("../images/master-1.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+                              <li>
+                                <input
+                                  name="discover"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                  type="checkbox"
+                                />{" "}
+                                <img
+                                  src={require("../images/descover.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+                              <li>
+                                <input
+                                  name="cirrus"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                  type="checkbox"
+                                />{" "}
+                                <img
+                                  src={require("../images/cirrus.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+                              <li>
+                                <input
+                                  name="americanExpress"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                  type="checkbox"
+                                />{" "}
+                                <img
+                                  src={require("../images/am.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="business-cover text-center">
+                            <button
+                              type="submit"
+                              className="last_btn"
+                              onClick={this.updatePaymentButton}
+                            >
+                              Update
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    ) : (
+                      <div className="paymentbox">
+                        <ul>{paymentAccepted}</ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              
+              
+            </div>
+          </div>*/}
+
+
+
+<div className="mt-30">
+                  <div className="light-blue">
+                    <div className="box-space">
+                      <h2 className="analytics_btnx">
+                        Payment Method
+                        <button
+                          className="pay_last_btn"
+                          onClick={this.editPaymentButton}
+                        >
+                          Edit
+                        </button>{" "}
+                      </h2>
+                    </div>
+
+                    {this.state.paymentLoading ? (
+                      <div style={{ textAlign: "center" }}>
+                        <Loader
+                          type="Oval"
+                          color="#00BFFF"
+                          height={30}
+                          width={30}
+                          // timeout={3000} //3 secs
+                        />
+                      </div>
+                    ) : this.state.paymentEdit ? (
+                      <div className="mathedbox">
+                        <form onSubmit={this.editDetailsHandler}>
+                          <div className="paymentbox">
+                            <ul>
+                              <li>
+                                <input
+                                  name="visa"
+                                  type="checkbox"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                />{" "}
+                                <img
+                                  src={require("../images/visa.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+
+                              <li>
+                                <input
+                                  name="maestro"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                  type="checkbox"
+                                />{" "}
+                                <img
+                                  src={require("../images/master-1.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+                              <li>
+                                <input
+                                  name="discover"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                  type="checkbox"
+                                />{" "}
+                                <img
+                                  src={require("../images/descover.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+                              <li>
+                                <input
+                                  name="cirrus"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                  type="checkbox"
+                                />{" "}
+                                <img
+                                  src={require("../images/cirrus.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+                              <li>
+                                <input
+                                  name="americanExpress"
+                                  onChange={this.checkBoxHandler}
+                                  value="true"
+                                  type="checkbox"
+                                />{" "}
+                                <img
+                                  src={require("../images/am.jpg")}
+                                  alt="visa"
+                                />
+                              </li>
+                              <li className="plushbtnbox">
+                              <a className="add_btnnew"><i className="zmdi zmdi-plus"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="business-cover text-center">
+                            <button
+                              type="submit"
+                              className="last_btn"
+                              onClick={this.updatePaymentButton}
+                            >
+                              Update
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    ) : (
+                      <div className="paymentbox">
+                        <ul>{paymentAccepted} 
+                        <li className="plushbtnbox">
+                              <a className="add_btnnew"><i className="zmdi zmdi-plus"></i></a>
+                              </li></ul>
+                      </div>
+                    )}
+                  </div>
+                  </div>
+
+
 
           <div className="mt-30">
             <div className="row">
               <div className="col-md-4">
                 <div className="business-cover">
                   <h3>Business covers image</h3>
-                  <div className="coverimgupload">
+                  {/*<div className="coverimgupload">
                     {this.state.coverImageLoading ? (
                       <div style={{ textAlign: "center" }}>
                         <Loader
@@ -1945,6 +2137,19 @@ export default class LocationManager extends Component {
                         />
                       </div>
                     )}
+                  </div>*/}
+                  <div className="coverimgupload">
+                    <img src={require('../images/b-1.jpg')} alt=""/>
+                  </div>
+                  <div className="plush_new">
+                  <span><i className="zmdi zmdi-plus"></i>
+                  Attatch a image
+                  <input
+                          type="file"
+                          name="Business_Cover_Image"
+                          />
+                  </span>
+
                   </div>
                 </div>
               </div>
@@ -1952,7 +2157,26 @@ export default class LocationManager extends Component {
                 <div className="business-cover">
                   <h3>Starred Business covers image</h3>
                   <div className="row">
-                    {this.state.otherImagesLoading ? (
+                    <div className="col-md-12">
+                      <ul className="shared-business">
+                        <li>
+                          <img src={require('../images/sh-1.png')} alt=""/>
+                        </li>
+                        <li>
+                          <img src={require('../images/sh-2.png')} alt=""/>
+                        </li>
+                        <li>
+                          <img src={require('../images/sh-3.png')} alt=""/>
+                        </li>
+                        <li>
+                          <img src={require('../images/sh-4.png')} alt=""/>
+                        </li>
+                        <li>
+                          <img src={require('../images/sh-5.png')} alt=""/>
+                        </li>
+                      </ul>
+                    </div>
+                   {/* {this.state.otherImagesLoading ? (
                       <div style={{ textAlign: "center" }}>
                         <Loader
                           type="Oval"
@@ -1996,7 +2220,7 @@ export default class LocationManager extends Component {
                           </div>
                         )
                       )
-                    )}
+                    )}*/}
 
                     {/* {LocationDetails.Df_location_image ? 
                     LocationDetails.Df_location_image.map((image, i) => (

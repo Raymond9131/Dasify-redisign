@@ -798,11 +798,11 @@ export default class ReviewAnalytics extends Component {
         {all_connections.length != 0 ?
         <div>
         <div className=" mb-30">
-          <div className="analytics-whice">
+          <div className="antbox">
             <div className="box-space ">
               <h2 className="analytics_btnx">
                 Analytics
-                {/* <div className="dropdown">
+               <div className="dropdown">
                   <a
                     href="#"
                     className="last_btn dropdown-toggle"
@@ -818,7 +818,7 @@ export default class ReviewAnalytics extends Component {
                       <li>Last nine month</li>
                     </ul>
                   </div>
-                </div> */}
+                </div> 
               </h2>
             </div>
 
@@ -826,8 +826,11 @@ export default class ReviewAnalytics extends Component {
               <div className="row">
                 <div className="col-md-3">
                   <div className="totl-listing">
+                  <h3>Total Review</h3>
                     <div className="icon">
-                      <img src={require("../images/re_an_1.png")} />
+                      <div className="icon-comment">
+                    <i className="zmdi zmdi-comment-outline"></i>
+                    </div>
                     </div>
                     <div className="icon-text">
                       <h2>
@@ -849,17 +852,21 @@ export default class ReviewAnalytics extends Component {
                           </div> */}
                         </div>
                       </h2>
-                      <h3>Total Review</h3>
+                      
                     </div>
                   </div>
                 </div>
 
                 <div className="col-md-3">
                   <div className="totl-listing">
+                  <h3>New Review</h3>
                     <div className="icon">
-                      <img src={require("../images/re_an_2.png")} />
+                    <div className="icon-comment">
+                    <i className="zmdi zmdi-comments"></i>
+                    </div>
                     </div>
                     <div className="icon-text">
+
                       <h2>
                         {total_new_reviews == 0 ? "-" : total_new_reviews}
                         <div className="dropdown parsent">
@@ -879,15 +886,18 @@ export default class ReviewAnalytics extends Component {
                           </div> */}
                         </div>
                       </h2>
-                      <h3>New Review</h3>
+                     
                     </div>
                   </div>
                 </div>
 
                 <div className="col-md-3">
                   <div className="totl-listing">
+                  <h3>Average Rating</h3>
                     <div className="icon">
-                      <img src={require("../images/re_an_3.png")} />
+                    <div className="icon-comment">
+                    <i className="zmdi zmdi-trending-up"></i>
+                    </div>
                     </div>
                     <div className="icon-text">
                       <h2>
@@ -911,15 +921,18 @@ export default class ReviewAnalytics extends Component {
                           </div> */}
                         </div>
                       </h2>
-                      <h3>Average Rating</h3>
+                     
                     </div>
                   </div>
                 </div>
 
                 <div className="col-md-3">
                   <div className="totl-listing">
+                  <h3>Review Response rate</h3>
                     <div className="icon">
-                      <img src={require("../images/re_an_4.png")} />
+                    <div className="icon-comment">
+                    <i className="zmdi zmdi-share"></i>
+                    </div>
                     </div>
                     <div className="icon-text">
                       <h2>
@@ -941,7 +954,7 @@ export default class ReviewAnalytics extends Component {
                           </div> */}
                         </div>
                       </h2>
-                      <h3>Review Response rate</h3>
+                      
                     </div>
                   </div>
                 </div>
@@ -960,7 +973,7 @@ export default class ReviewAnalytics extends Component {
                 width="100%"
               >
                 <thead>
-                  <tr>
+                  <tr className="thead-color">
                     <th>Review Sites (5)</th>
                     <th>Avg.Rating</th>
                     <th>Total Review</th>
@@ -971,7 +984,7 @@ export default class ReviewAnalytics extends Component {
                   </tr>
                 </thead>
 
-                <tbody>
+                <tbody className="cons">
                   <tr>
                     <td>Consolidated</td>
                     <td>
@@ -983,9 +996,9 @@ export default class ReviewAnalytics extends Component {
                           href="#"
                           className="dropdown-toggle"
                           data-toggle="dropdown"
-                        >
+                        >{/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1002,9 +1015,9 @@ export default class ReviewAnalytics extends Component {
                           href="#"
                           className="dropdown-toggle"
                           data-toggle="dropdown"
-                        >
+                        > {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1022,8 +1035,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1038,7 +1052,7 @@ export default class ReviewAnalytics extends Component {
                     <td>{/* 160 */}-</td>
                   </tr>
                   <tr>
-                    <td>Google</td>
+                    <td >Google</td>
                     <td>
                       {this.state.googleReviews.averageRating
                         ? this.state.googleReviews.averageRating
@@ -1049,8 +1063,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1070,8 +1085,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1089,8 +1105,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1116,8 +1133,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1135,8 +1153,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1154,8 +1173,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1181,8 +1201,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1202,8 +1223,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1220,9 +1242,9 @@ export default class ReviewAnalytics extends Component {
                           href="#"
                           className="dropdown-toggle"
                           data-toggle="dropdown"
-                        >
+                        >{/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1248,8 +1270,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1269,8 +1292,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1288,8 +1312,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
+                           {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1314,9 +1339,9 @@ export default class ReviewAnalytics extends Component {
                           href="#"
                           className="dropdown-toggle"
                           data-toggle="dropdown"
-                        >
+                        > {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1333,9 +1358,9 @@ export default class ReviewAnalytics extends Component {
                           href="#"
                           className="dropdown-toggle"
                           data-toggle="dropdown"
-                        >
+                        >{/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1353,8 +1378,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1380,8 +1406,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1399,8 +1426,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1418,8 +1446,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1444,9 +1473,9 @@ export default class ReviewAnalytics extends Component {
                           href="#"
                           className="dropdown-toggle"
                           data-toggle="dropdown"
-                        >
+                        >{/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1464,8 +1493,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1483,8 +1513,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1509,9 +1540,9 @@ export default class ReviewAnalytics extends Component {
                           href="#"
                           className="dropdown-toggle"
                           data-toggle="dropdown"
-                        >
+                        >{/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1529,8 +1560,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
+                           {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1548,8 +1580,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1575,8 +1608,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
+                           {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1594,8 +1628,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
+                           {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1613,8 +1648,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1640,8 +1676,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
+                           {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1659,8 +1696,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1678,8 +1716,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
+                           {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1705,8 +1744,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
+                           {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1724,8 +1764,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
+                           {/* 160% */}-
                           <span className="zmdi zmdi-caret-down"></span>{" "}
-                          {/* 160% */}-
+                         
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1743,8 +1784,9 @@ export default class ReviewAnalytics extends Component {
                           className="dropdown-toggle"
                           data-toggle="dropdown"
                         >
-                          <span className="zmdi zmdi-caret-down"></span>{" "}
                           {/* 160% */}-
+                          <span className="zmdi zmdi-caret-down"></span>{" "}
+                          
                         </a>
                         {/* <div className="dropdown-menu">
                             <ul>
@@ -1769,29 +1811,6 @@ export default class ReviewAnalytics extends Component {
 
         <div className="mt-30">
           <div className="row">
-            <div className="col-md-6">
-              
-                {/* <img src={require('../images/pie.jpg')}/> */}
-
-                {all_connections.length != 0 ? 
-                <div className="whitechart">
-                  <Chart
-                  width={"500px"}
-                  height={"500px"}
-                  chartType="PieChart"
-                  loader={<div>Loading Chart</div>}
-                  data={pieData}
-                  options={{
-                    title: "Sitewise Distribution Reviews",
-                    pieSliceText: "label",
-                    legend: "none",
-                    pieHole: 0.4
-                  }}
-                  rootProps={{ "data-testid": "1" }}
-                /> 
-                </div>: ""}
-              
-            </div>
             <div className="col-md-6">
               
                 {/* <img src={require('../images/pie-1.jpg')}/> */}
@@ -1819,6 +1838,30 @@ export default class ReviewAnalytics extends Component {
                 /> </div> : ""}
               
             </div>
+            <div className="col-md-6">
+              
+                {/* <img src={require('../images/pie.jpg')}/> */}
+
+                {all_connections.length != 0 ? 
+                <div className="whitechart">
+                  <Chart
+                  width={"500px"}
+                  height={"500px"}
+                  chartType="PieChart"
+                  loader={<div>Loading Chart</div>}
+                  data={pieData}
+                  options={{
+                    title: "Sitewise Distribution Reviews",
+                    pieSliceText: "label",
+                    legend: "none",
+                    pieHole: 0.4
+                  }}
+                  rootProps={{ "data-testid": "1" }}
+                /> 
+                </div>: ""}
+              
+            </div>
+            
           </div>
         </div>
       </div>

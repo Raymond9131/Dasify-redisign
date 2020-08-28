@@ -395,9 +395,9 @@ export default class ReviewGenerationCampaign extends Component {
             noValidate
           >
             <div className="rightside_title">
-              <h1>Create Review Generation Campaign</h1>
+              <h1>Enter Campaign Details </h1>
             </div>
-            <div className="tablediv mb-30">
+            {/*<div className="tablediv mb-30">
               <div className="row">
                 <div className="col-md-9">
                   <div className="review-generation">
@@ -431,24 +431,29 @@ export default class ReviewGenerationCampaign extends Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </div>*/}
 
             <div className="row">
               <div className="col-md-8">
                 <div className="step2">
                   <ul>
                     <li>
-                      <a href="#">Step 01</a>
+                      <div className="step-sms">
+                      <a href="#">Step 01</a><span>Ratings Email And SMS</span>
+                      </div>
+                      <div className="closebox"><i className="zmdi zmdi-close"></i> Close section</div>
+                      
                     </li>
                   </ul>
-                  <div className="ratingemail">
+                  
+                  {/*<div className="ratingemail">
                     <h2>
                       Ratings Email And SMS
                       <a className="close-section">
                         <i className="zmdi zmdi-close"></i>Close Section
                       </a>
                     </h2>
-                  </div>
+                  </div>*/}
 
                   <div className="formbox">
                     <div className="row">
@@ -506,7 +511,7 @@ export default class ReviewGenerationCampaign extends Component {
                         </div>
                       </div>
                       <div className="col-md-12">
-                        <div className="form-group">
+                        <div className="">
                           <label>Email Content</label>
                           <textarea
                             className="form-control"
@@ -520,12 +525,30 @@ export default class ReviewGenerationCampaign extends Component {
                           ></textarea>
                         </div>
                       </div>
+                      
+                      
+
                       <div className="col-md-12">
+                        <div className="sms-content">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                            <div className=" mt-30">
+                              <div className="light-blue">
+                            <div className="row">
+                            <div className="col-md-12">
                         <div className="text-style">
                           <h3>Choose Review Sites</h3>
                           <p>
-                            You can only select maximum of 2 review sites in the
-                            review email
+                          the vocabulary, and the questions
                           </p>
 
                           <div className="googlebox">
@@ -580,9 +603,8 @@ export default class ReviewGenerationCampaign extends Component {
                               ""
                             )}
                           </div>
-                        </div>
-                      </div>
-                      <div className="col-md-12" style={{ marginTop: 20 }}>
+
+                          <div className="" style={{ marginTop: 20 }}>
                         <div className="col-md-6">
                           <div className="form-group">
                             {this.add_customWebsiteName()}
@@ -594,173 +616,26 @@ export default class ReviewGenerationCampaign extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-12">
+                        </div>
+                      </div>
+
+                      
+
+                            </div>
+                              </div>
+                            </div>
+
+                            <div className="mt-30 step2">
+                              <div className="customer-phone">
+                              <h3>Customer Email / Phone number</h3>
                         <div className="sms-content">
-                          Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. Lorem Ipsum has been the
-                          industry's standard dummy text ever since the 1500s,
-                          when an unknown printer took a galley
+                        Business vocabulary and commonly used phrases are also detailed in the texts, and all this information - including the texts themselves, the vocabulary, and the questions - can be downloaded for free. Business vocabulary and commonly
+                         used phrases are also detailed in the texts, and all this. 
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="step2">
-                  <div className="ratingemail">
-                    <h2>Rating Email And SMS Template</h2>
-                  </div>
-
-                  <div className="formbox">
-                    <div className="sms_template">
-                      <h3>Hi (name)</h3>
-                      <b>{email_heading}</b>
-                    </div>
-                    <div className="sms_template">
-                      <p>{email_content}</p>
-                      {review_by_google ? (
-                        <div>
-                          <br />
-                          <img
-                            src={require("../images/googlemap.png")}
-                            alt="Google Map"
-                            height={100}
-                            width={100}
-                          />
-                          <p>Google</p>
-                          <br />
-                          <button>Review</button>
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                      {review_by_apple ? (
-                        <div>
-                          <br />
-                          <img
-                            src={require("../images/apple.png")}
-                            alt="Apple"
-                            height={100}
-                            width={100}
-                          />
-                          <p>Apple</p>
-                          <br />
-                          <button>Review</button>
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                      {all_site_name[0] && all_site_url[0] ? (
-                        <div>
-                          <br />
-                          <img
-                            src={require("../images/t-logo.jpg")}
-                            alt="Review"
-                            height={100}
-                            width={100}
-                          />
-                          <p>{all_site_name[0]}</p>
-                          <br />
-                          <button>Review</button>
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                      {all_site_name[1] && all_site_url[1] ? (
-                        <div>
-                          <br />
-                          <img
-                            src={require("../images/t-logo.jpg")}
-                            alt="Review"
-                            height={100}
-                            width={100}
-                          />
-                          <p>{all_site_name[1]}</p>
-                          <br />
-                          <button>Review</button>
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="step2 mt-30">
-                  <div className="formbox">
-                    <div className="sms_template blue">
-                      <h3>Hi (Customer Name) </h3>
-                      <p>
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley
-                      </p>
-                    </div>
-                    <p className="text-right sent">Sent as text message</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* For email and phone no */}
-
-            <div className="row mt-30">
-              <div className="col-md-12">
-                <div className="step2">
-                  <ul>
-                    <li>
-                      <a href="#">Step 02</a>
-                    </li>
-                  </ul>
-                  <div className="ratingemail">
-                    <h2>Enter campaign details</h2>
-                  </div>
-
-                  <div className="formbox">
-                    <div className="row">
-                      <div className="col-md-12">
-                        <div className="form-group">
-                          <label>Campaign Name</label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter Campaign Name"
-                            name="cmapign_name"
-                            onChange={this.changeHandler}
-                            value={cmapign_name}
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div className="col-md-4">
-                        <div className="form-group">
-                          <label>Customer First Name</label>
-                          {this.add_name()}
-                        </div>
-                      </div>
-                      <div className="col-md-4">
-                        <div className="form-group">
-                          <label>Customer Contact Details</label>
-                          {this.add_email()}
-                        </div>
-                      </div>
-                      or
-                      <div className="col-md-4">
-                        <div className="form-group">{this.add_phone()}</div>
-                      </div>
-                      <div className="col-md-12">
-                        <button onClick={this.add_customer_function}>
-                          + Add another customer
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="btnbox_button mt-30">
+                     
+                              </div>
+                            </div>
+                            <div className="btnbox_button mt-30">
                   <NavLink
                     to={{
                       pathname: "campaignpart2",
@@ -788,8 +663,153 @@ export default class ReviewGenerationCampaign extends Component {
                     Continue
                   </button> */}
                 </div>
+
               </div>
+
+              <div className="col-md-4">
+                <div className="step2">
+                  {/*<div className="ratingemail">
+                    <h2>Rating Email And SMS Template</h2>
+                  </div>*/}
+
+                  <div className="formbox">
+                    <div className="text-center newclass">
+                      <div className="help-icon">
+                    <span><i className="fa fa-info"></i></span>
+
+                      </div>
+                     
+                      <p><b>{email_heading}</b></p>
+                    </div>
+                    <div className="sms-newtext">
+                      <p>{email_content}</p>
+                      {review_by_google ? (
+                        <div className="apibox">
+                          
+                          <img
+                            src={require("../images/googlemap.png")}
+                            alt="Google Map"
+                            height={100}
+                            width={100}
+                          />
+                          <p>Google</p>
+                          
+                          <button>Review</button>
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                      {review_by_apple ? (
+                        <div className="apibox">
+                          
+                          <img
+                            src={require("../images/apple.png")}
+                            alt="Apple"
+                            height={100}
+                            width={100}
+                          />
+                          <p>Apple</p>
+                         
+                          <button>Review</button>
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                      {all_site_name[0] && all_site_url[0] ? (
+                        <div className="apibox">
+                          
+                          <img
+                            src={require("../images/t-logo.jpg")}
+                            alt="Review"
+                            height={100}
+                            width={100}
+                          />
+                          <p>{all_site_name[0]}</p>
+                         
+                          <button>Review</button>
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                      {all_site_name[1] && all_site_url[1] ? (
+                        <div className="apibox">
+                         
+                          <img
+                            src={require("../images/t-logo.jpg")}
+                            alt="Review"
+                            height={100}
+                            width={100}
+                          />
+                          <p>{all_site_name[1]}</p>
+                         
+                          <button>Review</button>
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                    <div className="toggle-switch">
+                    <label className="switch">
+      <input type="checkbox" className="switch-input"/>
+      <span className="switch-label" data-on="On" data-off="Off"></span>
+      <span className="switch-handle"></span>
+    </label>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div className="step2 mt-30">
+                  <div className="formbox">
+                    <div className="raitingemail">
+                      <h3>Raiting Email And SMS templete</h3>
+                      <div className="raitingcolor">
+                      <p>
+                      Business vocabulary and commonly used
+phrases are also detailed in the texts, and all
+this information including the texts 
+                      </p>
+                      </div>
+
+                      <div className="raitingcolor">
+                      <p>
+                      Business vocabulary and commonly used
+phrases are also detailed in the texts, and all
+this information including the texts 
+                      </p>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <div className="step2 mt-30">
+                  <div className="formbox">
+                    <div className="raitingemail">
+                      
+                      <div className="raitingcolor">
+                      <p>
+                      Business vocabulary and commonly used
+phrases are also detailed in the texts, and all
+this information including the texts 
+                      </p>
+                      </div>
+
+                      
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+           </div>
+
+
             </div>
+
+            {/* For email and phone no */}
+
+           
           </form>
         </div>
 

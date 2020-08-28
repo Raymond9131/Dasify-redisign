@@ -905,10 +905,340 @@ export default class ViewListing extends Component {
 
       
         <div className="rightside_title">
-          <h1>Listing</h1>
+          <h1>Listing Overview</h1>
         </div>
         {this.props.match.params.locationId != "null" ? <div>
-        <div className="tablediv">
+      <div className="row">
+        <div className="col-md-8">
+        <div className="listing-dolce">
+          <div className="dolce-title">
+            <h2>Dolce Vita Hair Salon<br/><span>Satmasjid Road, Moham, Dhak</span></h2>
+            <button className="pay_last_btn">Edit</button>
+          </div>
+        <div className="dolcebox">
+          <div className="dolce-profile">
+            <img src={require('../images/dolce.png')} alt=""/>
+          </div>
+          <div className="dolce-text">
+            <h4>ADDRESS AND CONTACT</h4>
+            <p>Satmasjid Road, Moham, Dhaka 1207 <br/>Р 407-650-448</p>
+          </div>
+        </div>
+
+        <div className="dolce-profile-user">
+        <ul>
+          <li>
+            <img src={require('../images/dolce-1.png')} alt=""/>
+          </li>
+          <li>
+            <img src={require('../images/dolce-2.png')} alt=""/>
+          </li>
+          <li>
+            <img src={require('../images/dolce-3.png')} alt=""/>
+          </li>
+          <li>
+            <img src={require('../images/dolce-4.png')} alt=""/>
+          </li>
+          <li>
+            <img src={require('../images/dolce-5.png')} alt=""/>
+          </li>
+        </ul>
+<h3>BUSSINES DISCRIPTION</h3>
+<p>Business vocabulary and commonly used phrases are also detailed in the texts, and all this 
+  information - including the texts themselves, the vocabulary,</p>
+        </div>
+
+
+
+        </div>
+        </div>
+        <div className="col-md-4">
+<div className="dolce-list">
+  <div className="lightblue-list">
+    <div className="dolce-icon">
+      <i className="zmdi zmdi-play-circle-outline"></i>
+    </div>
+    <div className="dolce-textbox">
+      <h4>38</h4>
+      <strong>Total Listing</strong>
+      <p>Keyword that have moved up in the rank</p>
+    </div>
+  </div>
+
+
+  <div className="lightblue-list">
+    <div className="dolce-icon">
+      <i className="zmdi zmdi-refresh-alt"></i>
+    </div>
+    <div className="dolce-textbox">
+      <h4>12</h4>
+      <strong>Sync Listing</strong>
+      <p>Keyword that have moved up in the rank</p>
+    </div>
+  </div>
+
+
+  <div className="lightblue-list">
+    <div className="dolce-icon">
+      <i className="zmdi zmdi-sign-in"></i>
+    </div>
+    <div className="dolce-textbox">
+      <h4>02</h4>
+      <strong>Requiring Action</strong>
+      <p>Keyword that have moved up in the rank</p>
+    </div>
+  </div>
+
+
+</div>
+
+        </div>
+      </div>
+      <div className="mt-30">
+        <div className="row">
+          <div className="col-md-4">
+            <div className="bing-box">
+              <div className="google-top">
+                <img src={require('../images/google-new.png')} alt=""/>
+
+                <div className="progress" data-percentage="100">
+				<span className="progress-left">
+					<span className="progress-bar"></span>
+				</span>
+				<span className="progress-right">
+					<span className="progress-bar"></span>
+				</span>
+				<div className="progress-value">
+					<div>
+						100%<br />
+						<span>score</span>
+					</div>
+				</div>
+			</div>
+
+              </div>
+
+<div className="bing-detils">
+  <ul>
+    <li>
+    <span>Link:</span>
+    <div className="bing-detail-text">
+    <input type="checkbox" id="html" defaultChecked/>
+      <label htmlFor="html"></label>
+    </div>
+    </li>
+
+    <li>
+    <span>Name:</span>
+    <div className="bing-detail-text">
+    Kandl Water Condition Inc.
+    </div>
+    </li>
+    <li>
+    <span>Address:</span>
+    <div className="bing-detail-text">
+    264 Manitoba St. Spicar, 56288, USA
+    </div>
+    </li>
+    <li>
+    <span>Phone:</span>
+    <div className="bing-detail-text">
+    (320)706-50-20 
+    </div>
+    </li>
+    <h3>Detailed breakdown</h3>
+    <ul className="breack-bing">
+      <li><span>Categories</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Website URL Present</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Hours of operation</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Photos present</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Reviews</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+    </ul>
+
+  </ul>
+</div>
+
+
+
+
+            </div>
+          </div>
+          {/*bing start*/}
+          <div className="col-md-4">
+            <div className="bing-box">
+            <div className="google-top">
+                <img src={require('../images/bing-new.png')} alt=""/>
+
+                <div className="progress" data-percentage="98">
+				<span className="progress-left">
+					<span className="progress-bar"></span>
+				</span>
+				<span className="progress-right">
+					<span className="progress-bar"></span>
+				</span>
+				<div className="progress-value">
+					<div>
+						98%<br />
+						<span>score</span>
+					</div>
+				</div>
+			</div>
+
+              </div>
+
+<div className="bing-detils">
+  <ul>
+    <li>
+    <span>Link:</span>
+    <div className="bing-detail-text">
+    <input type="checkbox" id="html1" defaultChecked/>
+      <label htmlFor="html1"></label>
+    </div>
+    </li>
+
+    <li>
+    <span>Name:</span>
+    <div className="bing-detail-text">
+    Kandl Water Condition Inc.
+    </div>
+    </li>
+    <li>
+    <span>Address:</span>
+    <div className="bing-detail-text">
+    264 Manitoba St. Spicar, 56288, USA
+    </div>
+    </li>
+    <li>
+    <span>Phone:</span>
+    <div className="bing-detail-text">
+    (320)706-50-20 
+    </div>
+    </li>
+    <h3>Detailed breakdown</h3>
+    <ul className="breack-bing">
+      <li><span>Categories</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Website URL Present</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Hours of operation</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Photos present</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Reviews</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+    </ul>
+
+  </ul>
+</div>
+
+
+
+
+            </div>
+          </div>
+          {/*bing end*/}
+
+
+ {/*yelp start*/}
+ <div className="col-md-4">
+            <div className="bing-box">
+              <div className="google-top">
+                <img src={require('../images/yelp-new.png')} alt=""/>
+
+                <div className="progress" data-percentage="80">
+				<span className="progress-left">
+					<span className="progress-bar"></span>
+				</span>
+				<span className="progress-right">
+					<span className="progress-bar"></span>
+				</span>
+				<div className="progress-value">
+					<div>
+						80%<br />
+						<span>score</span>
+					</div>
+				</div>
+			</div>
+
+              </div>
+
+<div className="bing-detils">
+  <ul>
+    <li>
+    <span>Link:</span>
+    <div className="bing-detail-text">
+    <input type="checkbox" id="html2" defaultChecked/>
+      <label htmlFor="html2"></label>
+    </div>
+    </li>
+
+    <li>
+    <span>Name:</span>
+    <div className="bing-detail-text">
+    Kandl Water Condition Inc.
+    </div>
+    </li>
+    <li>
+    <span>Address:</span>
+    <div className="bing-detail-text">
+    264 Manitoba St. Spicar, 56288, USA
+    </div>
+    </li>
+    <li>
+    <span>Phone:</span>
+    <div className="bing-detail-text">
+    (320)706-50-20 
+    </div>
+    </li>
+    <h3>Detailed breakdown</h3>
+    <ul className="breack-bing">
+      <li><span>Categories</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Website URL Present</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Hours of operation</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Photos present</span>
+      <div className="bing-cat"><a className="bing-yes">Yes</a></div>
+      </li>
+      <li><span>Reviews</span>
+      <div className="bing-cat"><a className="bing-no">No</a></div>
+      </li>
+    </ul>
+
+  </ul>
+</div>
+
+
+
+
+            </div>
+          </div>
+          {/*yelp end*/}
+
+
+        </div>
+      </div>
+
+       {/* <div className="tablediv">
           <div className="row">
             <div className="col-md-6">
               <div className="listingdetails">
@@ -971,8 +1301,8 @@ export default class ViewListing extends Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className=" mt-30">
+        </div>*/}
+        {/*<div className=" mt-30">
           <div className="row">
             <div className="col-md-4">
               <div className="totl-listing">
@@ -1015,8 +1345,129 @@ export default class ViewListing extends Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="update-account mt-30">
+        </div>*/}
+
+<div className="mt-30">
+  <h2 className="account-listing">Account</h2>
+  <div className="account-api">
+     <div className="row d-flex">
+       <div className="col-md-3">
+       <div className="f-connect">
+<div className="yelp-icon">
+<img src={require('../images/icon-1.png')} alt="yelp"/>
+</div>
+<div className="yelp-text"></div>
+</div> 
+       </div>
+       <div className="col-md-3">
+       <a href="/yelplogin" className="connect_btn">Connected</a>
+       </div>
+       <div className="col-md-6">
+       <div className="refres_box disble_refresh"><i className="zmdi zmdi-close"></i>
+       <span>Connect your to sinc the lasting</span></div>
+
+       </div>
+     </div>
+
+  </div>
+
+
+
+  <div className="account-api">
+     <div className="row d-flex">
+       <div className="col-md-3">
+       <div className="f-connect">
+<div className="yelp-icon">
+<img src={require('../images/icon-2.png')} alt="yelp"/>
+</div>
+<div className="yelp-text"><p>Connected</p>
+<h4>Khondokor Touhid Likhon</h4>
+</div>
+</div> 
+       </div>
+       <div className="col-md-3">
+       <a href="#" className="disconnect_btn">Disconnect</a>
+       </div>
+       <div className="col-md-6">
+       <div className="refres_box disble_refresh refres-link"><i className="fa fa-link"></i>
+       <span>Connect your to sinc the lasting</span></div>
+
+       </div>
+     </div>
+
+  </div>
+
+
+
+  <div className="account-api">
+     <div className="row d-flex">
+       <div className="col-md-3">
+       <div className="f-connect">
+<div className="yelp-icon">
+<img src={require('../images/icon-3.png')} alt="yelp"/>
+</div>
+<div className="yelp-text"></div>
+</div> 
+       </div>
+       <div className="col-md-3">
+       <a href="#" className="connect_btn">Connected</a>
+       </div>
+       <div className="col-md-6">
+       <div className="refres_box disble_refresh"><i className="zmdi zmdi-close"></i>
+       <span>Connect your to sinc the lasting</span></div>
+
+       </div>
+     </div>
+
+  </div>
+
+
+  <div className="account-api">
+     <div className="row d-flex">
+       <div className="col-md-3">
+       <div className="f-connect">
+<div className="yelp-icon">
+<img src={require('../images/icon-4.png')} alt="yelp"/>
+</div>
+<div className="yelp-text"><p>Connected</p>
+<h4>Khondokor Touhid Likhon</h4>
+</div>
+</div> 
+       </div>
+       <div className="col-md-3">
+       <a href="#" className="disconnect_btn">Disconnect</a>
+       </div>
+       <div className="col-md-6">
+       <div className="refres_box disble_refresh refres-link"><i className="fa fa-link"></i>
+       <span>Connect your to sinc the lasting</span></div>
+
+       </div>
+     </div>
+
+  </div>
+
+<div className="listing-lastupdate">
+  <p>Last Update Yesterday at 13:10 PM</p>
+  <PDFDownloadLink
+                  document={this.Quixote(pdf_data)}
+                  fileName="connected_listing_report.pdf"
+                >
+                  {({ blob, url, loading, error }) =>
+                    this.state.loader || this.state.category == "Loading...." ? (
+                      "Loading document..."
+                    ) : (
+                      <a className="download-report">Download Report</a>
+                    )
+                  }
+                </PDFDownloadLink>
+</div>
+
+
+
+</div>
+
+
+        <div className="update-account mt-30" style={{display:'none'}}>
           <div className="box-space">
             <div className="row d-flex">
               <div className="col-md-8">
